@@ -1,0 +1,19 @@
+package com.example.pieknarzecz.garage.model.command;
+
+import lombok.Data;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
+@Data
+public class UpdateGarageCommand {
+    private Long id;
+
+    @NotBlank(message = "Please fill the field")
+    private String adres;
+
+    @Min(value = 0)
+    private int spots;
+
+    private boolean entryForLpg;
+}
